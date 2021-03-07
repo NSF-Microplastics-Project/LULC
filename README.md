@@ -1,2 +1,2 @@
 # Landcover
-This repository covers the land use summarization for the NSF Microplastics project area.
+This repository covers the landuse/landcover summarization for the NSF Microplastics project area.
