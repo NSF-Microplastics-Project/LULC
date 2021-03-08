@@ -19,7 +19,6 @@ SFB_LULC <- data.table::fread("https://github.com/NSF-Microplastics-Project/LULC
 SFB_LULC <- readr::read_csv("https://github.com/NSF-Microplastics-Project/LULC/raw/main/Output/SFB_LULC.csv") # readr
 SFB_LULC <- read.csv("https://github.com/NSF-Microplastics-Project/LULC/raw/main/Output/SFB_LULC.csv") # base R
 ```
-<br>
 
 #### Issues/Problems?
 
