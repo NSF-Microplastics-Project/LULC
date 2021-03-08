@@ -15,17 +15,6 @@ knitr::opts_chunk$set(echo = TRUE, eval = F)
 
 <br>
 
-Add description of C-CAP here and source links.
-
-Add notes on project need and general method.
-
-Add notes on output and how to access it.
-
-<br>
-
-
-<br>
-
 <details>
   <summary><b>Required Libraries</b></summary>
 ```{r}
@@ -103,7 +92,6 @@ SFB.riskregions <- IETC::unzipShape(SFB.riskregions.z) # loads GitHub shapefile 
 # Crop Raster to Risk Regions
 SFB.CCAP.crop <- crop(SFB.CCAP, extent(SFB.riskregions)) # Crop to filtered risk region
 SFB.CCAP.mask <- mask(SFB.CCAP.crop, SFB.riskregions)
-apc <- prod(res(SFB.CCAP.mask)) # calculates the m^2 area per pixel based on original CCAP resolution
 plot(SFB.CCAP.mask)
 
 # Extract Raster Values
@@ -119,5 +107,11 @@ SFB.LULC.tabulated <- lapply(seq(SFB.LULC), tabFunc, SFB.LULC, SFB.riskregions, 
 
 # Write Final Table to Outputs
 write_csv(SFB.LULC.tabulated, "Output/SFB_LULC.csv")
+```
+
+```{r}
+SFB_LULC <- data.table::fread("https://github.com/NSF-Microplastics-Project/LULC/raw/main/Output/SFB_LULC.csv")
+SFB_LULC <- readr::read_csv("https://github.com/NSF-Microplastics-Project/LULC/raw/main/Output/SFB_LULC.csv")
+SFB_LULC <- read.csv("https://github.com/NSF-Microplastics-Project/LULC/raw/main/Output/SFB_LULC.csv")
 ```
 
