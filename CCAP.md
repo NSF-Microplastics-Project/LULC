@@ -109,11 +109,3 @@ SFB.LULC.tabulated <- lapply(seq(SFB.LULC), tabFunc, SFB.LULC, SFB.riskregions, 
 # Write Final Table to Outputs
 write_csv(SFB.LULC.tabulated, "Output/SFB_LULC.csv")
 ```
-
-
-```r
-SFB_LULC <- data.table::fread("https://github.com/NSF-Microplastics-Project/LULC/raw/main/Output/SFB_LULC.csv")
-SFB_LULC <- readr::read_csv("https://github.com/NSF-Microplastics-Project/LULC/raw/main/Output/SFB_LULC.csv")
-SFB_LULC <- read.csv("https://github.com/NSF-Microplastics-Project/LULC/raw/main/Output/SFB_LULC.csv")
-```
-
