@@ -22,6 +22,7 @@ SFB_LULC <- read.csv("https://github.com/NSF-Microplastics-Project/LULC/raw/main
 
 Please create an [issue](https://github.com/NSF-Microplastics-Project/LULC/issues).
 
+<br>
 
 ## Table Creation Method
 
@@ -33,6 +34,8 @@ C-CAP data  within the project extent were acquired August, 2020 as `*.tif` rast
 4. Extract Pixel Counts Within Risk Regions Using `raster::extract()`
 5. Tabulate `raster::extract()` Output
 6. Convert Pixel Counts to Square Kilometers
+
+<br>
 
 ## Citation
 >National Oceanic and Atmospheric Administration, Office for Coastal Management. Coastal Change Analysis Program (C-CAP) Regional Land Cover. Charleston, SC: NOAA Office for Coastal Management. Accessed August 2020 at www.coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/.
