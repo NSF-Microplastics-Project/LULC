@@ -10,8 +10,6 @@ C-CAP (Coastal Change and Analysis Program) Regional Land Cover data are produce
 
 This table should be accessed directly from GitHub to ensure the latest version is used in analyses. Access the CSV file [here]("https://github.com/NSF-Microplastics-Project/LULC/Output") or with your favorite loading function in R:
 
-<br>
-
 #### Examples
 
 ```R
