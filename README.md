@@ -21,7 +21,12 @@ SFB_LULC <- read.csv("https://github.com/NSF-Microplastics-Project/LULC/raw/main
 ```
 <br>
 
-## Method
+#### Issues/Problems?
+
+Please create an [issue](https://github.com/NSF-Microplastics-Project/LULC/issues).
+
+
+## Table Creation Method
 
 C-CAP data  within the project extent were acquired August, 2020 as `*.tif` raster files. The C-CAP raster was exported from ArcGIS as an ENVI `*.dat` raster for convenience. The raster was then imported in R and tabulated by risk region. The full analysis in R can be found [here](https://github.com/NSF-Microplastics-Project/LULC/blob/main/CCAP.md). A general overview of the steps taken to tabulate the C-CAP data are as follows:
 
