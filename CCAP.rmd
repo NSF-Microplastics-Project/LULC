@@ -94,6 +94,24 @@ SFB.CCAP.crop <- crop(SFB.CCAP, extent(SFB.riskregions)) # Crop to filtered risk
 SFB.CCAP.mask <- mask(SFB.CCAP.crop, SFB.riskregions)
 plot(SFB.CCAP.mask)
 
+# Reclass color scheme
+CCAP.clr <- read_delim('Data/CCAP_colormap.clr', delim = " ") %>% # colormap file from ArcGIS with 256 values
+  unite(Colors, '0_1':'0_3', sep=",") %>% # unite RGB columns for R,G,B format
+  add_row('0' = 0, Colors = '0,0,0', .before = 1) # color map missing 0 class value
+  # rename(c(Class = '0', R = '0_1', B = '0_2', G = '0_3'))
+
+# Convert ArcGIS RGB colormap to Hex
+# https://stackoverflow.com/questions/29372126/r-plots-using-rgb-values-from-dataframe
+CCAP.clr.v <- sapply(
+  strsplit(as.character(CCAP.clr$Colors), ","),
+  function(x){
+    rgb(x[1], x[2], x[3], m=255)
+    }
+  )
+
+# update Raster Color Table
+colortable(SFB.CCAP.crop) <- CCAP.clr.v # modify raster color table with imported ArcGIS table
+
 # Extract Raster Values
 SFB.LULC <- raster::extract(SFB.CCAP.mask, SFB.riskregions) # be patient, this takes a while
 
