@@ -27,9 +27,10 @@ C-CAP data  within the project extent were acquired August, 2020 as `*.tif` rast
 
 1. Load Raster and Risk Region Data
 2. Crop and Mask Raster to Risk Regions
-3. Extract Pixel Counts Within Risk Regions Using `raster::extract()`
-4. Tabulate `raster::extract()` Output
-5. Convert Pixel Counts to Square Kilometers
+3. Use ArcGIS Colormap File to Update Raster Color Table
+4. Extract Pixel Counts Within Risk Regions Using `raster::extract()`
+5. Tabulate `raster::extract()` Output
+6. Convert Pixel Counts to Square Kilometers
 
 ## Citation
 >National Oceanic and Atmospheric Administration, Office for Coastal Management. Coastal Change Analysis Program (C-CAP) Regional Land Cover. Charleston, SC: NOAA Office for Coastal Management. Accessed August 2020 at www.coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/.
